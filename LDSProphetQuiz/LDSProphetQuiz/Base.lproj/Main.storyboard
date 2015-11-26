@@ -26,8 +26,18 @@
                                     <action selector="handleGo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AAS-Bo-thF"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CLv-9q-OW8">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CLv-9q-OW8">
                                 <rect key="frame" x="40" y="317" width="520" height="21"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="520" id="zkn-HS-a2U"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ocK-zV-z7c">
+                                <rect key="frame" x="40" y="369" width="520" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -38,6 +48,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="CLv-9q-OW8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="C2L-dp-IeU"/>
+                            <constraint firstItem="ocK-zV-z7c" firstAttribute="top" secondItem="CLv-9q-OW8" secondAttribute="bottom" constant="31" id="EWp-mP-4Cy"/>
+                            <constraint firstItem="ocK-zV-z7c" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="Ilb-gy-tqG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ocK-zV-z7c" secondAttribute="trailing" constant="20" id="QCl-fP-zkN"/>
                             <constraint firstItem="zw1-4u-Giq" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="WDY-Nl-exT"/>
                             <constraint firstAttribute="trailingMargin" secondItem="CLv-9q-OW8" secondAttribute="trailing" constant="20" id="WUz-8Y-vmd"/>
                             <constraint firstItem="CLv-9q-OW8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZGv-hG-yo7"/>
@@ -46,6 +59,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="answerLabel" destination="ocK-zV-z7c" id="qi6-tb-dE7"/>
                         <outlet property="goLabel" destination="CLv-9q-OW8" id="hn8-qf-9g0"/>
                     </connections>
                 </viewController>
