@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {    
+class ViewController: UIViewController {
     
     var questionDict: [String: String] = [
         "Who is this prophet above?": "Thomas S. Monson",
@@ -21,36 +21,43 @@ class ViewController: UIViewController {
         "Who was the prophet when the proclamation to the world came out?": "Gordon B. Hinckley"
     ]
     
-    
     var questionIndex: Int = 0
     
-    
-    @IBOutlet weak var goLabel: UILabel!
-    
     @IBOutlet weak var answerLabel: UILabel!
-    
+    @IBOutlet weak var questionLabel: UILabel!
+    @IBOutlet weak var questionButton: UIButton!
+    @IBOutlet weak var answerButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        answerButton.hidden = true
+        answerLabel.text = ""
+        questionLabel.text = ""
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
-    @IBAction func handleGo(sender: AnyObject) {
+    
+    @IBAction func handleShowQuestion(sender: AnyObject) {
+        print("showing the question")
         if questionIndex > questionDict.count - 1 {
             questionIndex = 0
         }
-        
-        if let (question, answer) = questionDict[questionIndex] {
-            goLabel.text = question
+
+        if let (question, _) = questionDict[questionIndex] {
+            questionLabel.text = question
+        }
+        answerButton.hidden = false
+        questionButton.hidden = true
+        answerLabel.text = ""
+    }
+ 
+    @IBAction func handleShowAnswer(sender: AnyObject) {
+        print("showing the answer")
+        if let (_, answer) = questionDict[questionIndex] {
             answerLabel.text = answer
             questionIndex++
         }
+        
+        questionButton.hidden = false
+        answerButton.hidden = true
     }
 }
 
