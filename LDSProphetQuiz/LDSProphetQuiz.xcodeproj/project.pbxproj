@@ -14,7 +14,8 @@
 		3C4C4A031C063ABF0043C224 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C4C4A011C063ABF0043C224 /* LaunchScreen.storyboard */; };
 		3C4C4A0E1C063ABF0043C224 /* LDSProphetQuizTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4C4A0D1C063ABF0043C224 /* LDSProphetQuizTests.swift */; };
 		3C4C4A191C063ABF0043C224 /* LDSProphetQuizUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4C4A181C063ABF0043C224 /* LDSProphetQuizUITests.swift */; };
-		3C4C4A271C063AD20043C224 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 3C4C4A261C063AD20043C224 /* README.md */; };
+		3C4C4A291C090DEF0043C224 /* ProphetImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4C4A281C090DEF0043C224 /* ProphetImageViewController.swift */; };
+		3C4C4A2B1C09100D0043C224 /* PhotoDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4C4A2A1C09100D0043C224 /* PhotoDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,8 @@
 		3C4C4A181C063ABF0043C224 /* LDSProphetQuizUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LDSProphetQuizUITests.swift; sourceTree = "<group>"; };
 		3C4C4A1A1C063ABF0043C224 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C4C4A261C063AD20043C224 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		3C4C4A281C090DEF0043C224 /* ProphetImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProphetImageViewController.swift; sourceTree = "<group>"; };
+		3C4C4A2A1C09100D0043C224 /* PhotoDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +109,8 @@
 				3C4C49FF1C063ABF0043C224 /* Assets.xcassets */,
 				3C4C4A011C063ABF0043C224 /* LaunchScreen.storyboard */,
 				3C4C4A041C063ABF0043C224 /* Info.plist */,
+				3C4C4A281C090DEF0043C224 /* ProphetImageViewController.swift */,
+				3C4C4A2A1C09100D0043C224 /* PhotoDataSource.swift */,
 			);
 			path = LDSProphetQuiz;
 			sourceTree = "<group>";
@@ -259,8 +264,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C4C4A271C063AD20043C224 /* README.md in Sources */,
 				3C4C49FB1C063ABE0043C224 /* ViewController.swift in Sources */,
+				3C4C4A291C090DEF0043C224 /* ProphetImageViewController.swift in Sources */,
+				3C4C4A2B1C09100D0043C224 /* PhotoDataSource.swift in Sources */,
 				3C4C49F91C063ABE0043C224 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
