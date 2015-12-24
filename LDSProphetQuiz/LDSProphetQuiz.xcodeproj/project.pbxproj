@@ -494,6 +494,7 @@
 				3C4C4A1F1C063ABF0043C224 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3C4C4A201C063ABF0043C224 /* Build configuration list for PBXNativeTarget "LDSProphetQuizTests" */ = {
 			isa = XCConfigurationList;
@@ -502,6 +503,7 @@
 				3C4C4A221C063ABF0043C224 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3C4C4A231C063ABF0043C224 /* Build configuration list for PBXNativeTarget "LDSProphetQuizUITests" */ = {
 			isa = XCConfigurationList;
@@ -510,6 +512,7 @@
 				3C4C4A251C063ABF0043C224 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
