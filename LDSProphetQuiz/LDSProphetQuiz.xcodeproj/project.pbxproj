@@ -16,6 +16,7 @@
 		3C4C4A191C063ABF0043C224 /* LDSProphetQuizUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4C4A181C063ABF0043C224 /* LDSProphetQuizUITests.swift */; };
 		3C4C4A291C090DEF0043C224 /* ProphetImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4C4A281C090DEF0043C224 /* ProphetImageViewController.swift */; };
 		3C4C4A2B1C09100D0043C224 /* PhotoDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4C4A2A1C09100D0043C224 /* PhotoDataSource.swift */; };
+		3CDA0D071C2C702B002A341D /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDA0D061C2C702B002A341D /* Quiz.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		3C4C4A261C063AD20043C224 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		3C4C4A281C090DEF0043C224 /* ProphetImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProphetImageViewController.swift; sourceTree = "<group>"; };
 		3C4C4A2A1C09100D0043C224 /* PhotoDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoDataSource.swift; sourceTree = "<group>"; };
+		3CDA0D061C2C702B002A341D /* Quiz.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Quiz.swift; path = Model/Quiz.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 		3C4C49F71C063ABE0043C224 /* LDSProphetQuiz */ = {
 			isa = PBXGroup;
 			children = (
+				3CDA0D051C2C6F9B002A341D /* Model */,
 				3C4C49F81C063ABE0043C224 /* AppDelegate.swift */,
 				3C4C49FA1C063ABE0043C224 /* ViewController.swift */,
 				3C4C49FC1C063ABE0043C224 /* Main.storyboard */,
@@ -131,6 +134,14 @@
 				3C4C4A1A1C063ABF0043C224 /* Info.plist */,
 			);
 			path = LDSProphetQuizUITests;
+			sourceTree = "<group>";
+		};
+		3CDA0D051C2C6F9B002A341D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3CDA0D061C2C702B002A341D /* Quiz.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,6 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C4C49FB1C063ABE0043C224 /* ViewController.swift in Sources */,
+				3CDA0D071C2C702B002A341D /* Quiz.swift in Sources */,
 				3C4C4A291C090DEF0043C224 /* ProphetImageViewController.swift in Sources */,
 				3C4C4A2B1C09100D0043C224 /* PhotoDataSource.swift in Sources */,
 				3C4C49F91C063ABE0043C224 /* AppDelegate.swift in Sources */,

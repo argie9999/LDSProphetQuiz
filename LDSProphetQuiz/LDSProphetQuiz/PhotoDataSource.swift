@@ -47,4 +47,22 @@ class PhotoDataSource {
         16: thomas_s_monson
     ]
     
+    static let names: [Int: String] = [
+        1: "Joseph Smith",
+        2: "Brigham Young",
+        3: "John Taylor",
+        4: "Wilford Woodruff",
+        5: "Lorenzo Snow",
+        6: "Joseph F. Smith",
+        7: "Heber J. Grant",
+        8: "George Albert Smith",
+        9: "David O. McKay",
+        10: "Joseph Fielding Smith",
+        11: "Harold B. Lee",
+        12: "Spencer W. Kimball",
+        13: "Ezra Taft Benson",
+        14: "Howard W. Hunter",
+        15: "Gordon B. Hinckley",
+        16: "Thomas S. Monson"
+    ]
 }

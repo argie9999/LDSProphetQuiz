@@ -14,6 +14,19 @@ class ProphetImageViewController: UIViewController {
     
     let photos: [Int: UIImage?] = PhotoDataSource.photos
     
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        print(" We need to create the quiz for them ")
+        let qs = QuizService()
+        let quiz = qs.createGame()
+        
+        
+        
+    }
+    
+    
     @IBAction func handleSwitchImage(sender: AnyObject) {
         let random = randomNumberFromRange(1, upper: photos.count)
         
@@ -23,6 +36,3 @@ class ProphetImageViewController: UIViewController {
     }
 }
 
-func randomNumberFromRange (lower: Int , upper: Int) -> Int {
-    return lower + Int(arc4random_uniform(UInt32(upper - lower + 1)))
-}
