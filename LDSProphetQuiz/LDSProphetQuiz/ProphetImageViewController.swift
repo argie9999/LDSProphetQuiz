@@ -21,7 +21,7 @@ class ProphetImageViewController: UIViewController {
         print(" We need to create the quiz for them ")
         let qs = QuizService()
         let quiz = qs.createGame()
-        
+        print(quiz)
         
         
     }
