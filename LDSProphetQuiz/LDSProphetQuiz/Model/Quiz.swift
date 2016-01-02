@@ -13,7 +13,6 @@ struct Quiz {
     
 }
 
-
 struct Question {
     var photo: UIImage
     var answers: [Answer]
@@ -21,54 +20,71 @@ struct Question {
 }
 
 struct Answer {
+    var index: Int
     var isCorrect: Bool
     var title: String
 }
 
 class QuizService {
-    func createGame() -> Quiz {
-        let photos = PhotoDataSource.photos
-        let names = PhotoDataSource.names
+    
+    let photos = PhotoDataSource.photos
+    let names = PhotoDataSource.names
+    
+    func createGame(questionsCount: Int, answersCount: Int) -> Quiz {
+        
+        guard questionsCount > 0 else {
+            fatalError("You must have more than 1 question")
+        }
+        
+        guard answersCount > 1 else {
+            fatalError("You must have more than 2 answers per question")
+        }
+        
+        guard answersCount < photos.count else {
+            fatalError("You cannot have more answers than the entire list of possible choice")
+        }
         
         var questions = [Question]()
         
-        for _ in 1...10 {
+        for _ in 1...questionsCount {
         
             var answers = [Answer]()
+            var correctImage: UIImage!
         
-            // Build correct answer
-            let random = randomNumberFromRange(1, upper: photos.count)
+            let randomNumbers = generateRandomNumbers(answersCount, lower: 1, upper: photos.count, isUnique: true)
             
-            guard let image = photos[random] where image != nil else {
-                fatalError("Unable to load photo")
-            }
-            guard let correctName = names[random] where correctName != "" else {
-                fatalError("Unable to load name")
-            }
-            
-            answers.append(Answer(isCorrect: true, title: correctName))
-            
-            // Build fake answers
-            for _ in 1...3 {
+            for index in 0...answersCount-1 {
                 
-                var fakeRandom: Int
-                repeat {
-                    fakeRandom = randomNumberFromRange(1, upper: photos.count)
-                } while (random != fakeRandom)
-                
-                guard let fakeName = names[fakeRandom] where fakeName != "" else {
-                    fatalError("Unable to load name")
+                if index == 0 {
+                    let (image, correctName) = buildCorrectAnswer(randomNumbers[index])
+                    correctImage = image
+                    answers.append(Answer(index: randomNumbers[index], isCorrect: true, title: correctName))
                 }
-
-                /// TODO: Ensure we don't have duplicate fake answers in the question
-                
-                answers.append(Answer(isCorrect: false, title: fakeName))
+                else {
+                    let fakeRandom = randomNumbers[index]
+                    guard let fakeName = names[fakeRandom] where fakeName != "" else {
+                        fatalError("Unable to load name")
+                    }
+                    
+                    answers.append(Answer(index: randomNumbers[index], isCorrect: false, title: fakeName))
+                }
             }
             
-            questions.append(Question(photo: image!, answers: answers))
+            questions.append(Question(photo: correctImage, answers: answers))
         }
         
         return Quiz(questions: questions)
+    }
+    
+    func buildCorrectAnswer(index: Int) -> (UIImage, String) {
+        guard let image = photos[index] where image != nil else {
+            fatalError("Unable to load photo")
+        }
+        guard let correctName = names[index] where correctName != "" else {
+            fatalError("Unable to load name")
+        }
+
+        return (image!, correctName)
     }
 }
 
@@ -76,3 +92,22 @@ func randomNumberFromRange (lower: Int , upper: Int) -> Int {
     return lower + Int(arc4random_uniform(UInt32(upper - lower + 1)))
 }
 
+func generateRandomNumbers(total: Int, lower: Int, upper: Int, isUnique: Bool) -> [Int] {
+    var numbers = [Int]()
+    
+    repeat {
+        let r = randomNumberFromRange(lower, upper: upper)
+        
+        if isUnique {
+            if !numbers.contains(r) {
+                numbers.append(r)
+            }
+        }
+        else {
+            numbers.append(r)
+        }
+        
+    } while (total != numbers.count)
+    
+    return numbers
+}

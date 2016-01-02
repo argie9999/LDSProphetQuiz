@@ -14,18 +14,13 @@ class ProphetImageViewController: UIViewController {
     
     let photos: [Int: UIImage?] = PhotoDataSource.photos
     
-    
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        
-        print(" We need to create the quiz for them ")
+
         let qs = QuizService()
-        let quiz = qs.createGame()
+        let quiz = qs.createGame(10, answersCount: 4)
         print(quiz)
-        
-        
     }
-    
     
     @IBAction func handleSwitchImage(sender: AnyObject) {
         let random = randomNumberFromRange(1, upper: photos.count)
@@ -35,4 +30,3 @@ class ProphetImageViewController: UIViewController {
         }
     }
 }
-
