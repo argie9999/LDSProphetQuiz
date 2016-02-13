@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		3C4C49F91C063ABE0043C224 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4C49F81C063ABE0043C224 /* AppDelegate.swift */; };
-		3C4C49FB1C063ABE0043C224 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4C49FA1C063ABE0043C224 /* ViewController.swift */; };
 		3C4C49FE1C063ABE0043C224 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C4C49FC1C063ABE0043C224 /* Main.storyboard */; };
 		3C4C4A001C063ABF0043C224 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C4C49FF1C063ABF0043C224 /* Assets.xcassets */; };
 		3C4C4A031C063ABF0043C224 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C4C4A011C063ABF0043C224 /* LaunchScreen.storyboard */; };
@@ -39,7 +38,6 @@
 /* Begin PBXFileReference section */
 		3C4C49F51C063ABE0043C224 /* LDSProphetQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LDSProphetQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C4C49F81C063ABE0043C224 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3C4C49FA1C063ABE0043C224 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3C4C49FD1C063ABE0043C224 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3C4C49FF1C063ABF0043C224 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3C4C4A021C063ABF0043C224 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -107,7 +105,6 @@
 			children = (
 				3CDA0D051C2C6F9B002A341D /* Model */,
 				3C4C49F81C063ABE0043C224 /* AppDelegate.swift */,
-				3C4C49FA1C063ABE0043C224 /* ViewController.swift */,
 				3C4C49FC1C063ABE0043C224 /* Main.storyboard */,
 				3C4C49FF1C063ABF0043C224 /* Assets.xcassets */,
 				3C4C4A011C063ABF0043C224 /* LaunchScreen.storyboard */,
@@ -275,7 +272,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C4C49FB1C063ABE0043C224 /* ViewController.swift in Sources */,
 				3CDA0D071C2C702B002A341D /* Quiz.swift in Sources */,
 				3C4C4A291C090DEF0043C224 /* ProphetImageViewController.swift in Sources */,
 				3C4C4A2B1C09100D0043C224 /* PhotoDataSource.swift in Sources */,

@@ -13,20 +13,28 @@ class ProphetImageViewController: UIViewController {
     @IBOutlet weak var prophetImageView: UIImageView!
     
     let photos: [Int: UIImage?] = PhotoDataSource.photos
+    var quiz: Quiz?
+    var questionIndex: Int = 0
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
 
         let qs = QuizService()
-        let quiz = qs.createGame(10, answersCount: 4)
-        print(quiz)
+        quiz = qs.createGame(10, answersCount: 4)
     }
     
     @IBAction func handleSwitchImage(sender: AnyObject) {
-        let random = randomNumberFromRange(1, upper: photos.count)
         
-        if let image = photos[random] {
-            prophetImageView.image = image
+        guard questionIndex < quiz?.questions.count else {
+            print("Game is over. Thank you.")
+            return
         }
+        
+        if let image = quiz?.questions[questionIndex].photo {
+            prophetImageView.image = image
+            questionIndex++
+        }
+        
+        // TODO: Caleb - now that we are showing the right image, we need to show the people to choose from.
     }
 }
